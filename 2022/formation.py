@@ -1,4 +1,6 @@
-with open('words.txt') as f:
+import os
+
+with open(f'{os.path.dirname(os.path.abspath(__file__))}/words.txt') as f:
     all_words = f.read().splitlines()
 three_letter_words = [word for word in all_words if len(word) == 3]
 nine_letter_words = [word for word in all_words if len(word) == 9]
